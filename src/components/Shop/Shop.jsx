@@ -1,19 +1,19 @@
 import React from "react";
 import Products from "../Products/Products";
-import './Shop.css';
+import "./Shop.css";
 
 const Shop = () => {
-    const [products, setProducts] = React.useState([]);
-    React.useEffect(() => {
-        fetch('./products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
+  const [products, setProducts] = React.useState([]);
+  React.useEffect(() => {
+    fetch("./products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   return (
-    <div className='shop-container'>
+    <div className="shop-container">
       <div className="product-container">
         <h2>Product Loaded : {products.length}</h2>
-        <Products/>
+        <Products />
       </div>
       <div className="cart-container">
         <h3>Order Summary</h3>
@@ -23,5 +23,4 @@ const Shop = () => {
     </div>
   );
 };
-
 export default Shop;
