@@ -10,11 +10,14 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
+
     <div className="shop-container">
-      <div className="product-container">
-        <h2>Product Loaded : {products.length}</h2>
-        <Products />
+      <div className="products-container">
+        {products.map((product, index) => (
+          <Products {...product} key={index} />
+        ))}
       </div>
+
       <div className="cart-container">
         <h3>Order Summary</h3>
         <p>Select Item : </p>
