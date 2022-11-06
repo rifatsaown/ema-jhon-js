@@ -10,7 +10,6 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-
     <div className="shop-container">
       <div className="products-container">
         {products.map((product, index) => (
@@ -26,4 +25,5 @@ const Shop = () => {
     </div>
   );
 };
+
 export default Shop;
