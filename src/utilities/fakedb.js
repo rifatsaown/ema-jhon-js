@@ -19,7 +19,7 @@ const addToDb = id =>{
     }
     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 }
-
+//delete a single item from the cart
 const removeFromDb = id =>{
     const storedCart = localStorage.getItem('shopping-cart');
     if(storedCart){
@@ -30,7 +30,7 @@ const removeFromDb = id =>{
         }
     }
 }
-
+//delete all items from the cart
 const deleteShoppingCart = () =>{
     localStorage.removeItem('shopping-cart');
 }
