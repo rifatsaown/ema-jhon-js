@@ -5,6 +5,7 @@ const addToDb = id =>{
     if(storedCart){
         shoppingCart = JSON.parse(storedCart);
     }
+
     // add quantity
     const quantity = shoppingCart[id];
     if(quantity){
@@ -36,6 +37,7 @@ const removeFromDb = id =>{
         }
     }
 }
+
 //delete all items from the cart
 const deleteShoppingCart = () =>{
     localStorage.removeItem('shopping-cart');
@@ -45,5 +47,5 @@ export {
     addToDb, 
     removeFromDb,
     deleteShoppingCart,
-    getStoredCart
+    getStoredCart,
 }
