@@ -10,6 +10,7 @@ export default function Cart({ cart }) {
     }
     let tax = Math.ceil((total + shipping) * 0.1);
     let grandTotal = total + shipping + tax;
+    
   return (
     <div className="cart">
       <h2>Order Summary</h2>
