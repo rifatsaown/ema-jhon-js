@@ -15,7 +15,7 @@ const Shop = () => {
   }, []);
 
   React.useEffect(() => {
-    console.log( getStoredCart());
+    console.log(getStoredCart());
   }, [cart]);
 
   const handleAddToCart = (product) => {
