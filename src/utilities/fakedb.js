@@ -21,9 +21,7 @@ const addToDb = id => {
 //get the cart data from local storage
 const getStoredCart = () => {
     const storedCart = localStorage.getItem('shopping-cart');
-    if (storedCart) {
-        return JSON.parse(storedCart);
-    }
+    if (storedCart) {return JSON.parse(storedCart);}
 }
 
 //delete a single item from the cart
