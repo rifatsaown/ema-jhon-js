@@ -17,7 +17,7 @@ const Shop = () => {
   React.useEffect(() => {
     const stordCart = getStoredCart();
     for(const id  in stordCart){
-      
+      console.log(id);
     }
   }, [cart]);
 
